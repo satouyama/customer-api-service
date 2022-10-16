@@ -6,6 +6,16 @@ services:
       - 6379:6379
     volumes: 
       - redis:/data
+    networks: [starter-net]
+   starter:
+        image: starter
+        build: .
+        command: ./start.sh
+        env_file: [./.env]
+        volumes: ['.:/usr/app/current']
+        ports: ['3002:3000']
+        networks: [starter-net]
+        links: [redis]   
 volumes:
   redis:
     driver: local

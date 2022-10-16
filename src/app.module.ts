@@ -5,7 +5,6 @@ import * as dotenv from 'dotenv';
 import { PresentationModule } from './presentation/presentation.module';
 import { FactoriesModule } from './presentation/factories/factories.module';
 dotenv.config();
-console.log(process.env.REDIS_PASSWORD)
 @Module({
   imports: [
     ConfigModule.forRoot(),
