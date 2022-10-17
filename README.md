@@ -56,3 +56,5 @@ npm run start:dev
 # for docker
 docker compose up
 ```
+
+after docker is ready, you can use API in http://localhost:3000.
